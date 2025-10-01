@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCheck – Inteligencja sztuczna dla diagnostyki RTG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero" id="start">
+        <div class="hero-shell">
+            <nav class="nav">
+                <a class="brand" href="#start">
+                    <span class="brand-mark" aria-hidden="true">x</span>
+                    <span class="brand-name">check</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#produkt">Produkt</a></li>
+                    <li><a href="#dziala">Jak działa</a></li>
+                    <li><a href="#wyniki">Wyniki</a></li>
+                    <li><a href="#zespol">Zespół</a></li>
+                </ul>
+                <a class="button ghost" href="#przeslij">Prześlij RTG</a>
+            </nav>
+
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Sztuczna inteligencja do analizy zdjęć rentgenowskich płuc</span>
+                    <h1>XCHECK</h1>
+                    <p>
+                        Wspomóż decyzję kliniczną opartą na analizie zaawansowanych algorytmów. Wynik nie zastępuje lekarza,
+                        ale pozwala szybciej wykryć niepokojące zmiany.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#przeslij">Prześlij RTG</a>
+                        <a class="button link" href="#produkt">Zobacz jak działa</a>
+                    </div>
+                </div>
+
+                <div class="hero-showcase" aria-hidden="true">
+                    <div class="monitor-frame">
+                        <div class="monitor-header">
+                            <span>Analiza płuc</span>
+                            <span class="status-light"></span>
+                        </div>
+                        <div class="monitor-screen">
+                            <div class="scan-veil"></div>
+                            <div class="scan-highlight"></div>
+                            <div class="scan-fiber scan-fiber--left"></div>
+                            <div class="scan-fiber scan-fiber--right"></div>
+                            <div class="monitor-progress">
+                                <svg viewBox="0 0 120 120">
+                                    <defs>
+                                        <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#6dd6ff" />
+                                            <stop offset="100%" stop-color="#2d5cff" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="progress-track" cx="60" cy="60" r="52"></circle>
+                                    <circle class="progress-value" cx="60" cy="60" r="52" data-progress-circle></circle>
+                                </svg>
+                                <div class="progress-label">
+                                    <span class="progress-number" data-progress-number>78%</span>
+                                    <span class="progress-text">Ryzyko zmian</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="monitor-footer">
+                            <div class="footer-chip">Model Atlas v3</div>
+                            <span>Czas analizy: 12 s</span>
+                        </div>
+                    </div>
+
+                    <div class="phone-card">
+                        <div class="phone-glow"></div>
+                        <div class="phone-screen">
+                            <span class="phone-title">Mobile preview</span>
+                            <div class="phone-image">
+                                <div class="phone-highlight"></div>
+                            </div>
+                            <div class="phone-meta">
+                                <span>78% ryzyka</span>
+                                <span>Do konsultacji</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="produkt">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Dlaczego XCheck?</span>
+                    <h2>Precyzyjna analiza RTG w każdym gabinecie</h2>
+                    <p>
+                        Platforma XCheck łączy się z systemem PACS, normalizuje obrazy i podkreśla struktury wymagające uwagi.
+                        Interfejs jest prosty, a raporty przejrzyste dla zespołów klinicznych.
+                    </p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true"></span>
+                        <h3>Algorytmy klasy medycznej</h3>
+                        <p>Trenowane na ponad 2 mln opisanych przypadków, spełniając normy ISO 13485 oraz MDR.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true"></span>
+                        <h3>Integracja w 24h</h3>
+                        <p>Elastyczne API i gotowe konektory umożliwiają wdrożenie bez przestojów w pracowni.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true"></span>
+                        <h3>Transparentne raporty</h3>
+                        <p>Każdy wynik zawiera mapę cieplną, komentarze i poziom ufności rekomendacji.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section split" id="dziala">
+            <div class="section-inner split-layout">
+                <div class="split-visual reveal">
+                    <div class="timeline">
+                        <div class="stage">
+                            <span class="stage-number">01</span>
+                            <p>Import zdjęcia RTG z aparatu lub PACS</p>
+                        </div>
+                        <div class="stage">
+                            <span class="stage-number">02</span>
+                            <p>Preprocessing i normalizacja w chmurze</p>
+                        </div>
+                        <div class="stage">
+                            <span class="stage-number">03</span>
+                            <p>Analiza modeli głębokiego uczenia</p>
+                        </div>
+                        <div class="stage">
+                            <span class="stage-number">04</span>
+                            <p>Raport z rekomendacją dla lekarza</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-content">
+                    <span class="section-label">Jak działa</span>
+                    <h2>Automatyzacja procesu oceny radiologicznej</h2>
+                    <p>
+                        Każdy obraz przechodzi przez serię sieci neuronowych, które identyfikują zmiany nowotworowe, zapalne i
+                        strukturalne. Postęp analizy jest wizualizowany w czasie rzeczywistym, a wszystkie kroki trafiają do
+                        dziennika audytowego.
+                    </p>
+                    <ul class="benefits">
+                        <li>Dane przechowywane zgodnie z RODO i HIPAA</li>
+                        <li>Możliwość ręcznej korekty i porównania badań</li>
+                        <li>Wyniki dostępne od razu na dowolnym urządzeniu</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section soft" id="wyniki">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Wyniki</span>
+                    <h2>Diagnostyka wspierana przez AI</h2>
+                    <p>
+                        W testach klinicznych XCheck osiągnął czułość 96% w wykrywaniu zmian podejrzanych o choroby płuc. Analiza
+                        pozostaje transparentna i zawsze pod kontrolą specjalisty.
+                    </p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="value">96<small>%</small></span>
+                        <span class="description">Czułość modelu</span>
+                    </div>
+                    <div class="stat">
+                        <span class="value">12<small>s</small></span>
+                        <span class="description">Średni czas odpowiedzi</span>
+                    </div>
+                    <div class="stat">
+                        <span class="value">4.9</span>
+                        <span class="description">Ocena lekarzy użytkowników</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="zespol">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Zespół</span>
+                    <h2>Tworzone przez radiologów i inżynierów</h2>
+                    <p>
+                        Łączymy doświadczenie kliniczne z najnowszą wiedzą z zakresu uczenia maszynowego, aby dostarczać narzędzie
+                        wspierające lekarzy i pacjentów.
+                    </p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <h3>dr Anna Krawczyk</h3>
+                        <p>Radiolog, ekspertka ds. chorób płuc</p>
+                    </article>
+                    <article class="team-card">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <h3>Piotr Lewandowski</h3>
+                        <p>Główny inżynier AI</p>
+                    </article>
+                    <article class="team-card">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <h3>Julia Nowak</h3>
+                        <p>Projektantka doświadczeń medycznych</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section callout" id="przeslij">
+            <div class="section-inner">
+                <div class="callout-card">
+                    <div class="callout-copy">
+                        <h2>Prześlij zdjęcie RTG do analizy</h2>
+                        <p>Bezpieczne przesyłanie plików DICOM i PNG, natychmiastowa analiza i raport dla lekarza.</p>
+                        <form class="upload-form">
+                            <label for="file" class="upload-label">Wybierz plik</label>
+                            <input type="file" id="file" accept="image/*,.dcm">
+                            <button type="submit" class="button primary">Rozpocznij analizę</button>
+                        </form>
+                    </div>
+                    <div class="callout-visual" aria-hidden="true">
+                        <span class="callout-badge">Bezpieczne szyfrowanie</span>
+                        <div class="callout-wave"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>© 2024 XCheck</span>
+            <div class="footer-links">
+                <a href="#">Polityka prywatności</a>
+                <a href="#">Regulamin</a>
+                <a href="#">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
